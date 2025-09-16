@@ -1,25 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kraken Security - Advanced Cybersecurity Solutions</title>
-    <meta name="description" content="Kraken Security provides advanced cybersecurity solutions to protect your digital assets from emerging threats. Contact us for comprehensive security services." />
-    <meta name="author" content="Josh_d_developer" />
-    <meta name="keywords" content="cybersecurity, security solutions, digital protection, cyber threats, Kraken Security" />
-
-    <meta property="og:title" content="Kraken Security - Advanced Cybersecurity Solutions" />
-    <meta property="og:description" content="Protect your digital assets with Kraken Security's advanced cybersecurity solutions." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@kraken_security" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <meta name="description" content="Kraken Security provides advanced cybersecurity solutions to protect your digital assets from emerging threats. Contact us for comprehensive security services.">
+    <meta name="author" content="Josh_d_developer">
+    <meta name="keywords" content="cybersecurity, security solutions, digital protection, cyber threats, Kraken Security">
+    
+    <meta property="og:title" content="Kraken Security - Advanced Cybersecurity Solutions">
+    <meta property="og:description" content="Protect your digital assets with Kraken Security's advanced cybersecurity solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kraken_security">
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐙</text></svg>">
+</head>
+<body class="light-mode">
+    <!-- Background -->
+    <div class="hero-background"></div>
+    <div class="background-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <div class="logo-text">KRAKEN</div>
+                    <div class="logo-dot"></div>
+                </div>
+                
+                <!-- Controls -->
+                <div class="controls">
+                    <!-- Language Selector -->
+                    <div class="language-selector">
+                        <svg class="language-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="m4.93 4.93 4.24 4.24"/>
+                            <path d="m14.83 9.17 4.24-4.24"/>
+                            <path d="m14.83 14.83 4.24 4.24"/>
+                            <path d="m9.17 14.83-4.24 4.24"/>
+                        </svg>
+                        <select id="languageSelect" class="language-select">
+                            <option value="en">English</option>
+                            <option value="sw">Kiswahili</option>
+                            <option value="ha">Hausa</option>
+                            <option value="yo">Yorùbá</option>
+                            <option value="ig">Igbo</option>
+                            <option value="am">አማርኛ</option>
+                            <option value="zu">IsiZulu</option>
+                            <option value="xh">IsiXhosa</option>
+                            <option value="af">Afrikaans</option>
+                            <option value="so">Soomaali</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <line x1="12" y1="1" x2="12" y2="3"/>
+                            <line x1="12" y1="21" x2="12" y2="23"/>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                            <line x1="1" y1="12" x2="3" y2="12"/>
+                            <line x1="21" y1="12" x2="23" y2="12"/>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Hero Section -->
+                <div class="hero-section">
+                    <h1 class="hero-title">KRAKEN SECURITY</h1>
+                    <p class="hero-subtitle">Advanced cybersecurity solutions to protect your digital assets from emerging threats</p>
+                    <div class="hero-divider"></div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="form-container">
+                    <div class="contact-card" id="contactCard">
+                        <div class="card-header">
+                            <h2 class="card-title" data-translate="contactUs">Contact Us</h2>
+                            <p class="card-subtitle">Secure your digital infrastructure with Kraken</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label" data-translate="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" data-translate-placeholder="name">
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label" data-translate="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" data-translate-placeholder="email">
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label" data-translate="message">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="5" data-translate-placeholder="message"></textarea>
+                                <div class="error-message" id="messageError"></div>
+                            </div>
+                            
+                            <button type="submit" class="submit-button" id="submitButton">
+                                <svg class="submit-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+                                </svg>
+                                <span class="submit-text" data-translate="submit">Send Message</span>
+                                <div class="loading-spinner" id="loadingSpinner"></div>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Success Message -->
+                    <div class="success-card" id="successCard" style="display: none;">
+                        <div class="success-content">
+                            <svg class="success-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22,4 12,14.01 9,11.01"/>
+                            </svg>
+                            <h2 class="success-title" data-translate="success">Message sent successfully!</h2>
+                            <p class="success-subtitle">Thank you for reaching out to Kraken Security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    © 2024 <span data-translate="siteName">KRAKEN</span> Security. Built by 
+                    <span class="developer-credit" data-translate="developerCredit">Josh_d_developer</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <span class="toast-message"></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>
