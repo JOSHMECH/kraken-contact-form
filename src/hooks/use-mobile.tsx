@@ -1,4 +1,3 @@
-// Minimal mobile hook for remaining dependencies
 import * as React from "react";
 
 const MOBILE_BREAKPOINT = 768;

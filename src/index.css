@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Kraken Cybersecurity Purple Theme - Light Mode */
+    --background: 248 100% 99%;
+    --foreground: 264 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 264 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 264 15% 15%;
+
+    --primary: 270 70% 45%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 264 25% 95%;
+    --secondary-foreground: 264 15% 25%;
+
+    --muted: 264 15% 96%;
+    --muted-foreground: 264 8% 45%;
+
+    --accent: 270 50% 92%;
+    --accent-foreground: 270 70% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 264 20% 88%;
+    --input: 264 20% 94%;
+    --ring: 270 70% 45%;
+
+    /* Kraken Custom Colors */
+    --kraken-purple: 270 70% 45%;
+    --kraken-purple-light: 270 60% 65%;
+    --kraken-purple-dark: 270 80% 35%;
+    --kraken-gradient: linear-gradient(135deg, hsl(270 70% 45%), hsl(290 60% 55%));
+    --kraken-glow: 270 70% 45%;
+    --cyber-accent: 180 100% 70%;
+    
+    /* Shadows */
+    --shadow-cyber: 0 10px 40px -10px hsl(270 70% 45% / 0.3);
+    --shadow-glow: 0 0 30px hsl(270 70% 45% / 0.4);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Kraken Cybersecurity Purple Theme - Dark Mode */
+    --background: 264 20% 8%;
+    --foreground: 264 10% 95%;
+
+    --card: 264 18% 12%;
+    --card-foreground: 264 10% 95%;
+
+    --popover: 264 18% 12%;
+    --popover-foreground: 264 10% 95%;
+
+    --primary: 270 65% 65%;
+    --primary-foreground: 264 20% 8%;
+
+    --secondary: 264 15% 18%;
+    --secondary-foreground: 264 10% 85%;
+
+    --muted: 264 15% 15%;
+    --muted-foreground: 264 8% 65%;
+
+    --accent: 270 40% 25%;
+    --accent-foreground: 270 65% 85%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 264 20% 8%;
+
+    --border: 264 20% 22%;
+    --input: 264 18% 18%;
+    --ring: 270 65% 65%;
+
+    /* Dark mode shadows */
+    --shadow-cyber: 0 10px 40px -10px hsl(270 65% 65% / 0.4);
+    --shadow-glow: 0 0 30px hsl(270 65% 65% / 0.5);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .kraken-gradient {
+    background: var(--kraken-gradient);
+  }
+  
+  .cyber-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .cyber-shadow {
+    box-shadow: var(--shadow-cyber);
+  }
+  
+  .cyber-border {
+    border: 1px solid hsl(var(--kraken-purple) / 0.3);
+    background: hsl(var(--kraken-purple) / 0.05);
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--kraken-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--kraken-glow) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--kraken-glow) / 0.6);
+  }
+}
