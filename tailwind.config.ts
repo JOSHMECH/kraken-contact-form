@@ -47,6 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        kraken: {
+          DEFAULT: "hsl(var(--kraken-purple))",
+          light: "hsl(var(--kraken-purple-light))",
+          dark: "hsl(var(--kraken-purple-dark))",
+          glow: "hsl(var(--kraken-glow))",
+        },
+        cyber: {
+          accent: "hsl(var(--cyber-accent))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

@@ -8,33 +8,46 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Kraken Cybersecurity Purple Theme - Light Mode */
+    --background: 248 100% 99%;
+    --foreground: 264 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 264 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 264 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 270 70% 45%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 264 25% 95%;
+    --secondary-foreground: 264 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 264 15% 96%;
+    --muted-foreground: 264 8% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 270 50% 92%;
+    --accent-foreground: 270 70% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 264 20% 88%;
+    --input: 264 20% 94%;
+    --ring: 270 70% 45%;
+
+    /* Kraken Custom Colors */
+    --kraken-purple: 270 70% 45%;
+    --kraken-purple-light: 270 60% 65%;
+    --kraken-purple-dark: 270 80% 35%;
+    --kraken-gradient: linear-gradient(135deg, hsl(270 70% 45%), hsl(290 60% 55%));
+    --kraken-glow: 270 70% 45%;
+    --cyber-accent: 180 100% 70%;
+    
+    /* Shadows */
+    --shadow-cyber: 0 10px 40px -10px hsl(270 70% 45% / 0.3);
+    --shadow-glow: 0 0 30px hsl(270 70% 45% / 0.4);
 
     --radius: 0.5rem;
 
@@ -56,33 +69,39 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Kraken Cybersecurity Purple Theme - Dark Mode */
+    --background: 264 20% 8%;
+    --foreground: 264 10% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 264 18% 12%;
+    --card-foreground: 264 10% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 264 18% 12%;
+    --popover-foreground: 264 10% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 270 65% 65%;
+    --primary-foreground: 264 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 264 15% 18%;
+    --secondary-foreground: 264 10% 85%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 264 15% 15%;
+    --muted-foreground: 264 8% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 40% 25%;
+    --accent-foreground: 270 65% 85%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 264 20% 8%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 264 20% 22%;
+    --input: 264 18% 18%;
+    --ring: 270 65% 65%;
+
+    /* Dark mode shadows */
+    --shadow-cyber: 0 10px 40px -10px hsl(270 65% 65% / 0.4);
+    --shadow-glow: 0 0 30px hsl(270 65% 65% / 0.5);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +119,47 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .kraken-gradient {
+    background: var(--kraken-gradient);
+  }
+  
+  .cyber-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .cyber-shadow {
+    box-shadow: var(--shadow-cyber);
+  }
+  
+  .cyber-border {
+    border: 1px solid hsl(var(--kraken-purple) / 0.3);
+    background: hsl(var(--kraken-purple) / 0.05);
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--kraken-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes pulse-glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--kraken-glow) / 0.3);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--kraken-glow) / 0.6);
   }
 }
